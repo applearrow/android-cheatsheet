@@ -65,6 +65,9 @@ android {
             type="com.myapp.data.ViewModel" />
     </data>
     <ConstraintLayout... /> <!-- UI layout's root element -->
+      <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{viewmodel.firstName}"/>
 </layout>
 ```
 
