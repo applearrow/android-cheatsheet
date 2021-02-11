@@ -88,11 +88,23 @@ override fun onCreate(savedInstanceState: Bundle?) {
 }
 ```
 
-#### Use it from a Fragment, ListView, or RecyclerView adapter
+#### Use it from a Fragment
 ```kotlin
-val listItemBinding = ListItemBinding.inflate(layoutInflater, viewGroup, false)
-// or
-val listItemBinding = DataBindingUtil.inflate(layoutInflater, R.layout.list_item, viewGroup, false)
+class MainFragment : Fragment() {
+
+    private val viewModel: MainViewModel by viewModels()
+    private lateinit var binding: MainFragmentBinding
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        binding = MainFragmentBinding.inflate(inflater, container, false)
+        binding.lifecycleOwner = this
+        binding.viewmodel = viewModel
+        return binding.root
+    }
+}
 ```
 
 ## [:robot:](https://developer.android.com/jetpack/compose) Jetpack Compose 
