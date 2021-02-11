@@ -1,16 +1,16 @@
 # Ui techs
-## View Binding [:robot:](https://developer.android.com/topic/libraries/view-binding)
+## [:robot:](https://developer.android.com/topic/libraries/view-binding) View Binding 
 
 - module-level `build.gradle`:
 
-```groovy
+  ```groovy
 android {
     ...
     buildFeatures {
         viewBinding true
     }
 }
-```
+  ```
 
 - Use in a fragment
 
@@ -36,12 +36,12 @@ android {
   }
   ```
 
-```kotlin
+  ```kotlin
 binding.name.text = viewModel.name
 binding.button.setOnClickListener { viewModel.userClicked() }
-```
+  ```
 
-## Data Binding [:robot:](https://developer.android.com/topic/libraries/data-binding)
+## [:robot:](https://developer.android.com/topic/libraries/data-binding) Data Binding 
 
 - module-level `build.gradle`:
 
@@ -87,5 +87,5 @@ binding.button.setOnClickListener { viewModel.userClicked() }
   }
   ```
 
-## Jetpack Compose [:robot:](https://developer.android.com/jetpack/compose)
+## [:robot:](https://developer.android.com/jetpack/compose) Jetpack Compose 
 
